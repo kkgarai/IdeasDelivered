@@ -1,0 +1,55 @@
+body {
+  width: 360px;
+  margin: 0;
+  font: 13px/1.4 "Salesforce Sans", "Segoe UI", sans-serif;
+  color: #181818;
+}
+
+header, section {
+  padding: 12px 14px;
+}
+
+header {
+  border-bottom: 1px solid #e5e5e5;
+}
+
+h1, h2 {
+  margin: 0;
+}
+
+h1 {
+  font-size: 16px;
+}
+
+h2 {
+  font-size: 12px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #444;
+  margin-bottom: 8px;
+}
+
+#page {
+  margin: 6px 0 0;
+  color: #444;
+}
+
+label {
+  display: flex;
+  gap: 8px;
+  align-items: flex-start;
+  padding: 6px 0;
+}
+
+label span {
+  flex: 1;
+}
+
+a {
+  color: #0176d3;
+  text-decoration: none;
+}
+
+small {
+  color: #706e6b;
+}

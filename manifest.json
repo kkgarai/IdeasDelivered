@@ -1,0 +1,29 @@
+{
+  "manifest_version": 3,
+  "name": "Ideas Delivered",
+  "version": "0.1.0",
+  "description": "Salesforce ideas, delivered.",
+  "action": {
+    "default_title": "Ideas Delivered",
+    "default_popup": "popup.html"
+  },
+  "permissions": ["storage", "tabs"],
+  "host_permissions": [
+    "https://*.lightning.force.com/*",
+    "https://*.my.salesforce.com/*"
+  ],
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://*.lightning.force.com/*",
+        "https://*.my.salesforce.com/*"
+      ],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}
