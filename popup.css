@@ -1,19 +1,20 @@
 body {
-  width: 360px;
+  width: 380px;
   margin: 0;
-  font: 13px/1.4 "Salesforce Sans", "Segoe UI", sans-serif;
   color: #181818;
+  background: #f4f6f9;
+  font: 13px/1.4 "Salesforce Sans", "Segoe UI", sans-serif;
 }
 
-header, section {
+#locked, header, .search, section {
   padding: 12px 14px;
 }
 
-header {
-  border-bottom: 1px solid #e5e5e5;
+#locked p, #page, #count, small {
+  color: #5c5c5c;
 }
 
-h1, h2 {
+h1, h2, p {
   margin: 0;
 }
 
@@ -22,23 +23,52 @@ h1 {
 }
 
 h2 {
-  font-size: 12px;
+  margin-bottom: 8px;
+  font-size: 11px;
   letter-spacing: 0.04em;
   text-transform: uppercase;
   color: #444;
-  margin-bottom: 8px;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  background: #fff;
+  border-bottom: 1px solid #e5e5e5;
 }
 
 #page {
-  margin: 6px 0 0;
-  color: #444;
+  margin-top: 4px;
+}
+
+.search {
+  padding-bottom: 0;
+}
+
+input[type="search"] {
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid #c9c9c9;
+  border-radius: 6px;
+  padding: 8px 10px;
+  font: inherit;
+}
+
+section {
+  max-height: 240px;
+  overflow: auto;
 }
 
 label {
   display: flex;
   gap: 8px;
   align-items: flex-start;
-  padding: 6px 0;
+  margin-bottom: 6px;
+  padding: 8px;
+  background: #fff;
+  border: 1px solid #e5e5e5;
+  border-radius: 8px;
 }
 
 label span {
@@ -46,10 +76,10 @@ label span {
 }
 
 a {
-  color: #0176d3;
+  color: #0b5cab;
   text-decoration: none;
 }
 
-small {
-  color: #706e6b;
+.empty {
+  color: #5c5c5c;
 }

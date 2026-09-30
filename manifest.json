@@ -1,16 +1,19 @@
 {
   "manifest_version": 3,
   "name": "Ideas Delivered",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Salesforce ideas, delivered.",
   "action": {
     "default_title": "Ideas Delivered",
     "default_popup": "popup.html"
   },
-  "permissions": ["storage", "tabs"],
+  "permissions": ["storage", "tabs", "cookies"],
   "host_permissions": [
     "https://*.lightning.force.com/*",
-    "https://*.my.salesforce.com/*"
+    "https://*.my.salesforce.com/*",
+    "https://*.vf.force.com/*",
+    "https://*.cloudforce.com/*",
+    "https://*.my.salesforce-setup.com/*"
   ],
   "background": {
     "service_worker": "background.js",
@@ -20,7 +23,10 @@
     {
       "matches": [
         "https://*.lightning.force.com/*",
-        "https://*.my.salesforce.com/*"
+        "https://*.my.salesforce.com/*",
+        "https://*.vf.force.com/*",
+        "https://*.cloudforce.com/*",
+        "https://*.my.salesforce-setup.com/*"
       ],
       "js": ["content.js"],
       "run_at": "document_idle"

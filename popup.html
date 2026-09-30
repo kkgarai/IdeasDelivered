@@ -6,18 +6,30 @@
     <link rel="stylesheet" href="popup.css" />
   </head>
   <body>
-    <header>
+    <div id="locked">
       <h1>Ideas Delivered</h1>
-      <p id="page"></p>
-    </header>
-    <section>
-      <h2>Extension</h2>
-      <div id="extension"></div>
-    </section>
-    <section>
-      <h2>Package</h2>
-      <div id="package"></div>
-    </section>
+      <p>Open a Salesforce page.</p>
+    </div>
+    <div id="app" hidden>
+      <header>
+        <div>
+          <h1>Ideas Delivered</h1>
+          <p id="page"></p>
+        </div>
+        <p id="count"></p>
+      </header>
+      <div class="search">
+        <input id="find" type="search" placeholder="Find an idea" />
+      </div>
+      <section>
+        <h2>On this browser</h2>
+        <div id="extension"></div>
+      </section>
+      <section>
+        <h2>In the package</h2>
+        <div id="package"></div>
+      </section>
+    </div>
     <script type="module" src="popup.js"></script>
   </body>
 </html>
